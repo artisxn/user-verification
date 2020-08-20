@@ -1,0 +1,55 @@
+{
+    "name": "codicastudio/user-verification",
+    "description": "A noobs worthless garbage, just learning.",
+    "keywords": [
+        "worthless garabage by a noob."
+    ],
+    "homepage": "https://github.com/codicastudio/user-verification",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael J Brown",
+            "email": "codicastudiodev@gmail.com",
+            "homepage": "https://codicastudio.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4.8",
+        "illuminate/support": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "codicastudio\\UserVerification\\": "src/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "fzaninotto/faker": "^1.9",
+        "mockery/mockery": "^1.3",
+        "satooshi/php-coveralls": "^2.0"
+    },
+    "autoload-dev": {
+        "psr-4": {
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "codicastudio\\UserVerification\\UserVerificationServiceProvider"
+            ],
+            "aliases": {
+                "UserVerification": "codicastudio\\UserVerification\\Facades\\UserVerification"
+            }
+        }
+    }
+}
